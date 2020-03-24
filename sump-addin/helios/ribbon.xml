@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="RbnOnLoad" loadImage="RbnLoadImage">
+	<ribbon>
+		<tabs>
+			<tab id="CustomTab" label="Sumscoope">
+        <group idMso="GroupClipboard"/>
+        <group idMso="GroupFont"/>
+        <group idMso="GroupFormulaAuditing"/>
+				<group id="CustomGroup" label="辅助功能">
+					<button id="LoginButton" image="201" size="large" onAction="RbnOnBtnClick" getEnabled="RbnGetEnabled" getLabel="RbnGetLabel"/>
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
