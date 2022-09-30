@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\third_party\cJSON\cJSON.c" />
+    <ClCompile Include="..\sfa_utils\base64.cpp" />
+    <ClCompile Include="..\sfa_utils\config.cpp" />
+    <ClCompile Include="..\sfa_utils\sfa_log.cpp" />
+    <ClCompile Include="..\sfa_utils\sfa_utils.cpp" />
+    <ClCompile Include="client_info.cpp" />
+    <ClCompile Include="context.cpp" />
+    <ClCompile Include="dds_api.cpp" />
+    <ClCompile Include="dds_api_impl.cpp" />
+    <ClCompile Include="dds_utils.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="iam_session.cpp" />
+    <ClCompile Include="dds_session.cpp" />
+    <ClCompile Include="dds_proxy_impl.cpp" />
+    <ClCompile Include="request_manager.cpp" />
+    <ClCompile Include="subscribe_manager.cpp" />
+    <ClCompile Include="template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\sfa\dds\dds_api.h" />
+    <ClInclude Include="..\..\include\sfa\dds\dds_def.h" />
+    <ClInclude Include="..\..\include\sfa\dds\dds_proxy.h" />
+    <ClInclude Include="..\..\include\sfa\dds\dds_listener.h" />
+    <ClInclude Include="..\..\include\sfa\sfa_macro.h" />
+    <ClInclude Include="..\..\third_party\cJSON\cJSON.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_base\lava_base.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_base\singleton.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_box\i_proxy.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_box\lava_box_api.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\comm_protocol.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_client_session.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_comm_alg.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_connection.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_connector.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_event_listener.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message_body.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message_listener.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\lava_comm_api.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_comm\message_const.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\fake_mutex.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\interproc_detail.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\i_queue.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_alloc.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_container.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_conv.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_crt.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_utils_api.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\queue.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\queue_base.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\semaphore.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\spin_lock.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\spin_wait.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\stack.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\timer.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\utils_traits.h" />
+    <ClInclude Include="..\..\third_party\lava\lava_utils\wintype_def.h" />
+    <ClInclude Include="..\sfa_utils\base64.h" />
+    <ClInclude Include="..\sfa_utils\config.h" />
+    <ClInclude Include="..\sfa_utils\semaphore.h" />
+    <ClInclude Include="..\sfa_utils\sfa_base.h" />
+    <ClInclude Include="..\sfa_utils\sfa_container.h" />
+    <ClInclude Include="..\sfa_utils\sfa_log.h" />
+    <ClInclude Include="..\sfa_utils\sfa_utils.h" />
+    <ClInclude Include="..\sfa_utils\singleton.h" />
+    <ClInclude Include="..\sfa_utils\thread_pool.h" />
+    <ClInclude Include="..\sfa_utils\timer.h" />
+    <ClInclude Include="client_info.h" />
+    <ClInclude Include="const.h" />
+    <ClInclude Include="context.h" />
+    <ClInclude Include="dds_api_impl.h" />
+    <ClInclude Include="dds_utils.h" />
+    <ClInclude Include="lava_listener.h" />
+    <ClInclude Include="request_manager.h" />
+    <ClInclude Include="session.h" />
+    <ClInclude Include="iam_session.h" />
+    <ClInclude Include="dds_session.h" />
+    <ClInclude Include="dds_proxy_impl.h" />
+    <ClInclude Include="subscribe_manager.h" />
+    <ClInclude Include="template.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\conf\dds.ini" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{A168E1A1-3C25-4BC3-B3D8-EC00D07F4333}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dds</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>sfa_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;SFA_BUILD_DLL;SFA_EXPORT;SFA_WIN;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../include/;../../third_party/;../../third_party/lava/lava_base/;../../third_party/lava/lava_box/;../../third_party/lava/lava_comm/;../../third_party/lava/lava_utils/;../../third_party/log4cxx/header/;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>../../lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfa_msg.lib;lava_utils.lib;lava_comm.lib;lava_box.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SFA_BUILD_DLL;SFA_EXPORT;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SFA_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>sfa_msg.lib;lava_utils.lib;lava_comm.lib;lava_box.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;DDS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

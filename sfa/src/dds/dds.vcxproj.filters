@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dds_api">
+      <UniqueIdentifier>{34063b77-1b6a-48a3-8d04-c4ccc088dcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dds_impl">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="dds_impl\header">
+      <UniqueIdentifier>{ac0093bd-2f54-418f-9d0e-5f644e075bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dds_impl\source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="sfa_utils">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="sfa_utils\header">
+      <UniqueIdentifier>{769e262a-8d52-458f-974f-a35903893115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sfa_utils\source">
+      <UniqueIdentifier>{c134e0ff-d0c4-480d-9260-17a885cfa082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="conf">
+      <UniqueIdentifier>{69bf1fac-809e-431e-aed3-845ad762da48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{308da2be-6a4f-4149-a868-82eb6a439644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\lava">
+      <UniqueIdentifier>{5f5332e9-df1b-4b89-8142-80efacbaa78c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\lava\lava_base">
+      <UniqueIdentifier>{af9ec974-70ab-43ce-8578-d22fd787db6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\lava\lava_box">
+      <UniqueIdentifier>{239387f9-ef2d-4961-bbd1-3929ac31e616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\lava\lava_comm">
+      <UniqueIdentifier>{4e48fb3b-1cc9-472a-8ec5-03b4e5814c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\lava\lava_utils">
+      <UniqueIdentifier>{ec6428d7-ff65-4536-bf37-d2b23c2427e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\cJSON">
+      <UniqueIdentifier>{ef02134e-129e-4435-9561-e1b83fa9c30e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dds_api.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="dds_api_impl.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sfa_utils\sfa_log.cpp">
+      <Filter>sfa_utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sfa_utils\base64.cpp">
+      <Filter>sfa_utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="client_info.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="dds_utils.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="dds_proxy_impl.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="dds_session.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="iam_session.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\cJSON\cJSON.c">
+      <Filter>third_party\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sfa_utils\config.cpp">
+      <Filter>sfa_utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sfa_utils\sfa_utils.cpp">
+      <Filter>sfa_utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="context.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="subscribe_manager.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="request_manager.cpp">
+      <Filter>dds_impl\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\sfa\dds\dds_api.h">
+      <Filter>dds_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\dds\dds_def.h">
+      <Filter>dds_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_base\lava_base.h">
+      <Filter>third_party\lava\lava_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_base\singleton.h">
+      <Filter>third_party\lava\lava_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_box\i_proxy.h">
+      <Filter>third_party\lava\lava_box</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_box\lava_box_api.h">
+      <Filter>third_party\lava\lava_box</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\comm_protocol.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_client_session.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_comm_alg.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_connection.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_connector.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_event_listener.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message_body.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\i_message_listener.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\fake_mutex.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\i_queue.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\interproc_detail.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_alloc.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_container.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_conv.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_crt.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\lava_utils_api.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\queue.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\queue_base.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\semaphore.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\spin_lock.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\spin_wait.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\stack.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\timer.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\utils_traits.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_utils\wintype_def.h">
+      <Filter>third_party\lava\lava_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\message_const.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="dds_api_impl.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\sfa_log.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\base64.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\semaphore.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\sfa_base.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\timer.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="client_info.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="dds_utils.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="template.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\dds\dds_listener.h">
+      <Filter>dds_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\dds\dds_proxy.h">
+      <Filter>dds_api</Filter>
+    </ClInclude>
+    <ClInclude Include="session.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\sfa_macro.h">
+      <Filter>dds_api</Filter>
+    </ClInclude>
+    <ClInclude Include="dds_proxy_impl.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="dds_session.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="iam_session.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\cJSON\cJSON.h">
+      <Filter>third_party\cJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\config.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\sfa_utils.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="context.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="subscribe_manager.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\sfa_container.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\thread_pool.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sfa_utils\singleton.h">
+      <Filter>sfa_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="request_manager.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lava\lava_comm\lava_comm_api.h">
+      <Filter>third_party\lava\lava_comm</Filter>
+    </ClInclude>
+    <ClInclude Include="lava_listener.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="const.h">
+      <Filter>dds_impl\header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\conf\dds.ini">
+      <Filter>conf</Filter>
+    </None>
+  </ItemGroup>
+</Project>

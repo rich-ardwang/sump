@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98C3D3D2-1AB4-464E-81EC-715ED073F374}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SSMessage</RootNamespace>
+    <ProjectName>msg</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>sfa_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>sfa_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SFA_BUILD_DLL;SFA_EXPORT;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../include/;./src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../../lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "./../../bin/sfa_msg.lib" "./../../lib/" /y /i /f</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;SFA_EXPORT;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../include/;./src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../../lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\sfa\msg\value_field.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg_body.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg_codec.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg_context.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg_def.h" />
+    <ClInclude Include="..\..\include\sfa\msg\msg_header.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_array.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_array_row.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_ascii.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_byte.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_date.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_decimal.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_integer.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_kv_array.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_kv_array_row.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_time.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_unicode.h" />
+    <ClInclude Include="..\..\include\sfa\msg\value_unsigned_integer.h" />
+    <ClInclude Include="..\..\include\sfa\sfa_macro.h" />
+    <ClInclude Include="utils_ansi_unicode_utf8.h" />
+    <ClInclude Include="utils_byte_hex_str.h" />
+    <ClInclude Include="codec_ascii_string.h" />
+    <ClInclude Include="codec_byte.h" />
+    <ClInclude Include="consts.h" />
+    <ClInclude Include="codec_date.h" />
+    <ClInclude Include="codec_decimal.h" />
+    <ClInclude Include="fields.h" />
+    <ClInclude Include="field_id_type.h" />
+    <ClInclude Include="codec_integer.h" />
+    <ClInclude Include="codec_msg_body_full.h" />
+    <ClInclude Include="codec_msg_body_update.h" />
+    <ClInclude Include="codec_msg.h" />
+    <ClInclude Include="codec_util.h" />
+    <ClInclude Include="codec_msg_header.h" />
+    <ClInclude Include="msg_template.h" />
+    <ClInclude Include="codec_signed_integer.h" />
+    <ClInclude Include="msg_impl.h" />
+    <ClInclude Include="msg_body_impl.h" />
+    <ClInclude Include="msg_context_impl.h" />
+    <ClInclude Include="msg_header_impl.h" />
+    <ClInclude Include="codec_time.h" />
+    <ClInclude Include="codec_type.h" />
+    <ClInclude Include="codec_unicode_string.h" />
+    <ClInclude Include="codec_unsigned_integer.h" />
+    <ClInclude Include="utils_other.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="msg_codec_impl.cpp" />
+    <ClCompile Include="value_array_row.cpp" />
+    <ClCompile Include="value_array.cpp" />
+    <ClCompile Include="codec_ascii_string.cpp" />
+    <ClCompile Include="value_ascii.cpp" />
+    <ClCompile Include="codec_byte.cpp" />
+    <ClCompile Include="value_byte.cpp" />
+    <ClCompile Include="codec_date.cpp" />
+    <ClCompile Include="value_date.cpp" />
+    <ClCompile Include="codec_decimal.cpp" />
+    <ClCompile Include="value_decimal.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="fields.cpp" />
+    <ClCompile Include="field_id_type.cpp" />
+    <ClCompile Include="codec_integer.cpp" />
+    <ClCompile Include="value_integer.cpp" />
+    <ClCompile Include="value_kv_array_row.cpp" />
+    <ClCompile Include="value_kv_array.cpp" />
+    <ClCompile Include="codec_msg_body_full.cpp" />
+    <ClCompile Include="codec_msg_body_update.cpp" />
+    <ClCompile Include="codec_msg.cpp" />
+    <ClCompile Include="codec_util.cpp" />
+    <ClCompile Include="codec_msg_header.cpp" />
+    <ClCompile Include="msg_template.cpp" />
+    <ClCompile Include="codec_signed_integer.cpp" />
+    <ClCompile Include="msg_impl.cpp" />
+    <ClCompile Include="msg_body_impl.cpp" />
+    <ClCompile Include="msg_context_impl.cpp" />
+    <ClCompile Include="msg_header_impl.cpp" />
+    <ClCompile Include="codec_time.cpp" />
+    <ClCompile Include="value_time.cpp" />
+    <ClCompile Include="codec_type.cpp" />
+    <ClCompile Include="codec_unicode_string.cpp" />
+    <ClCompile Include="value_unicode.cpp" />
+    <ClCompile Include="codec_unsigned_integer.cpp" />
+    <ClCompile Include="value_unsigned_integer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

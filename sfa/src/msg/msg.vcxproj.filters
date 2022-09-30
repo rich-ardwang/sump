@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="msg_api">
+      <UniqueIdentifier>{c5b88fa4-af83-413c-ae39-60852435375f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_impl">
+      <UniqueIdentifier>{6e80e651-f666-4f19-aed4-e8a3b0166f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_impl\header">
+      <UniqueIdentifier>{69ad7857-5aee-454c-8062-4be2d43ee2a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_impl\source">
+      <UniqueIdentifier>{6458903d-00fc-4b0c-bef6-40b8a472c031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_field">
+      <UniqueIdentifier>{3f080494-a3a5-4c48-98c0-8c25f94d38b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_codec">
+      <UniqueIdentifier>{d16cac41-e3d6-41b7-b760-9693b83f173e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_template">
+      <UniqueIdentifier>{f2bf1a16-5af2-4668-ad3b-ba185742f0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_field\source">
+      <UniqueIdentifier>{de2bf61d-69e8-4dd1-9426-65355b3acbe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_codec\header">
+      <UniqueIdentifier>{e7205244-7865-4e4e-9482-86cee6427810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_codec\source">
+      <UniqueIdentifier>{7c149c1e-c2aa-4b01-8f2b-e8966b2d0b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_template\header">
+      <UniqueIdentifier>{ab6a1412-2cb4-45b2-ade7-12bc37b9a377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_template\source">
+      <UniqueIdentifier>{88cb04c6-aee3-4f85-8c5f-4dc9dd2a78f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_utils">
+      <UniqueIdentifier>{d706b127-3c8b-4411-9aa3-ea804ad3e170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_utils\header">
+      <UniqueIdentifier>{1098a429-ee8e-482c-a455-26c1defeb9fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg_utils\source">
+      <UniqueIdentifier>{7d9c0f4f-7eb6-4e04-911a-2bb86f2ddaf2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="consts.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="fields.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg_def.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg_body.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg_context.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg_header.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_impl.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_header_impl.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_body_impl.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_context_impl.h">
+      <Filter>msg_impl\header</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_template.h">
+      <Filter>msg_template\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_type.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_ascii_string.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_byte.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_date.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_decimal.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_integer.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_signed_integer.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_time.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_unicode_string.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_unsigned_integer.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_util.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_msg_header.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_msg_body_full.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_msg_body_update.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_msg.h">
+      <Filter>msg_codec\header</Filter>
+    </ClInclude>
+    <ClInclude Include="field_id_type.h">
+      <Filter>msg_template\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\msg_codec.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_array.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_array_row.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_ascii.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_byte.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_date.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_decimal.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_integer.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_kv_array.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_kv_array_row.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_time.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_unicode.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_unsigned_integer.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\msg\value_field.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sfa\sfa_macro.h">
+      <Filter>msg_api</Filter>
+    </ClInclude>
+    <ClInclude Include="utils_ansi_unicode_utf8.h">
+      <Filter>msg_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="utils_byte_hex_str.h">
+      <Filter>msg_utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="utils_other.h">
+      <Filter>msg_utils\header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="fields.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_impl.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_header_impl.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_body_impl.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_context_impl.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_template.cpp">
+      <Filter>msg_template\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_type.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_ascii_string.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_byte.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_date.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_decimal.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_integer.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_signed_integer.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_time.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_unicode_string.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_unsigned_integer.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_util.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_msg_header.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_msg_body_full.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_msg_body_update.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_msg.cpp">
+      <Filter>msg_codec\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_array_row.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_array.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_ascii.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_byte.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_date.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_decimal.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_integer.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_kv_array_row.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_kv_array.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_time.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_unicode.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="value_unsigned_integer.cpp">
+      <Filter>msg_field\source</Filter>
+    </ClCompile>
+    <ClCompile Include="field_id_type.cpp">
+      <Filter>msg_template\source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_codec_impl.cpp">
+      <Filter>msg_impl\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
