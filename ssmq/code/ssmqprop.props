@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BuildFolder>$(Platform)_vc10_$(CharacterSet)_$(Configuration)</BuildFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>..\..\bin\$(BuildFolder)\</OutDir>
+    <IntDir>$(BuildFolder)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <ImportLibrary>..\..\lib\$(BuildFolder)\$(ProjectName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\lib\$(BuildFolder)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="BuildFolder">
+      <Value>$(BuildFolder)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Obs">
+      <UniqueIdentifier>{f5899cd6-45fc-44b9-b31d-e68482653ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{857cbf12-4c2c-4dff-86a4-568672ce3027}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\QB_QM\MsgMng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QMToQB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QMToQBFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Base.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Mng.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\pubcode\Md5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session1.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session2.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session3.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session4.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\QB_QM\MsgQueueMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_Session5.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_SessionEx.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="QMObs_QBStatus.cpp">
+      <Filter>Obs</Filter>
+    </ClCompile>
+    <ClCompile Include="SSMQMsgSender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\inc\QB_QM\MsgMng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QMToQBFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Base.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Mng.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="IQMCommFrame.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\IQMToQB.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\pubcode\Md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\QB_QMDefine.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session1.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session2.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session3.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session4.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\MsgQueueMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_Session5.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_SessionEx.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\IQMToQB_Bond.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\IQMToQB_MM.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="QMObs_QBStatus.h">
+      <Filter>Obs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\IQMToQB_Purchase.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\QB_QM\IQMToQB_Remind.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SSMQMsgSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

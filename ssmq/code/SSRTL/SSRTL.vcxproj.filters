@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\TinyXML">
+      <UniqueIdentifier>{38ea3f2f-6454-4af8-8286-de035c349203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\TinyXML">
+      <UniqueIdentifier>{2359d164-edb0-4465-84cd-85c4f57e064f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Atomic">
+      <UniqueIdentifier>{fe3a714f-c819-4be4-857c-891d128cb6c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SpinLock">
+      <UniqueIdentifier>{e0dbaa3c-f6c5-4e7e-a846-672637a0dae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Semaphore">
+      <UniqueIdentifier>{bb4f1fcd-efc0-4b42-9463-f961b53296bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\zlib">
+      <UniqueIdentifier>{e5b8e067-7821-459a-924d-c1279411174b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zlib">
+      <UniqueIdentifier>{0f3ba210-37b6-4351-962a-e167cda6d619}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SSConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSDateTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxml.cpp">
+      <Filter>源文件\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlerror.cpp">
+      <Filter>源文件\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlparser.cpp">
+      <Filter>源文件\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Atomic\Atomic_win32.cpp">
+      <Filter>源文件\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="SpinLock\SpinLock_win32.cpp">
+      <Filter>源文件\SpinLock</Filter>
+    </ClCompile>
+    <ClCompile Include="Semaphore\Semaphore_win32.cpp">
+      <Filter>源文件\Semaphore</Filter>
+    </ClCompile>
+    <ClCompile Include="SSQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SSZip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\adler32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzio.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infback.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-dllversion.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SSConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSDateTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyXML\tinyxml.h">
+      <Filter>头文件\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="SSAtomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Atomic\Atomic_win32.h">
+      <Filter>源文件\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="SSSpinLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinLock\SpinLock_win32.h">
+      <Filter>源文件\SpinLock</Filter>
+    </ClInclude>
+    <ClInclude Include="SSSemaphore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Semaphore\Semaphore_win32.h">
+      <Filter>源文件\Semaphore</Filter>
+    </ClInclude>
+    <ClInclude Include="SSQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSSafeObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SSZip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\crc32.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\deflate.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffast.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffixed.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inflate.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inftrees.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\trees.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zutil.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

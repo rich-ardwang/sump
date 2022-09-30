@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SSMQClient", "SSMQClient\SSMQClient.vcxproj", "{A04F7BD9-4F43-469F-912D-CB8A16E42B55}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SSMQServer", "SSMQServer\SSMQServer.vcxproj", "{7C4A3D82-C194-4169-90DB-CC2A84EE8236}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QMToQB", "QMToQB\QMToQB.vcxproj", "{CD79BCB4-D7AF-400D-A194-D1E7E69BF1EE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QBToQM", "QBToQM\QBToQM.vcxproj", "{FB996FCE-312F-41AF-9A38-6FA0E99395BC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdbus", "sdbus\sdbus.vcxproj", "{CD5A6F10-0A81-4155-A7A4-5DD206512090}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zmq_engine", "zmq_engine\zmq_engine.vcxproj", "{1C2F6392-8736-44E9-975B-A7C24E068A91}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SSRTL", "SSRTL\SSRTL.vcxproj", "{51E9CEDD-DB9F-4008-B7DE-45A7B80836E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A04F7BD9-4F43-469F-912D-CB8A16E42B55}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A04F7BD9-4F43-469F-912D-CB8A16E42B55}.Debug|Win32.Build.0 = Debug|Win32
+		{A04F7BD9-4F43-469F-912D-CB8A16E42B55}.Release|Win32.ActiveCfg = Release|Win32
+		{A04F7BD9-4F43-469F-912D-CB8A16E42B55}.Release|Win32.Build.0 = Release|Win32
+		{7C4A3D82-C194-4169-90DB-CC2A84EE8236}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C4A3D82-C194-4169-90DB-CC2A84EE8236}.Debug|Win32.Build.0 = Debug|Win32
+		{7C4A3D82-C194-4169-90DB-CC2A84EE8236}.Release|Win32.ActiveCfg = Release|Win32
+		{7C4A3D82-C194-4169-90DB-CC2A84EE8236}.Release|Win32.Build.0 = Release|Win32
+		{CD79BCB4-D7AF-400D-A194-D1E7E69BF1EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD79BCB4-D7AF-400D-A194-D1E7E69BF1EE}.Debug|Win32.Build.0 = Debug|Win32
+		{CD79BCB4-D7AF-400D-A194-D1E7E69BF1EE}.Release|Win32.ActiveCfg = Release|Win32
+		{CD79BCB4-D7AF-400D-A194-D1E7E69BF1EE}.Release|Win32.Build.0 = Release|Win32
+		{FB996FCE-312F-41AF-9A38-6FA0E99395BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB996FCE-312F-41AF-9A38-6FA0E99395BC}.Debug|Win32.Build.0 = Debug|Win32
+		{FB996FCE-312F-41AF-9A38-6FA0E99395BC}.Release|Win32.ActiveCfg = Release|Win32
+		{FB996FCE-312F-41AF-9A38-6FA0E99395BC}.Release|Win32.Build.0 = Release|Win32
+		{CD5A6F10-0A81-4155-A7A4-5DD206512090}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD5A6F10-0A81-4155-A7A4-5DD206512090}.Debug|Win32.Build.0 = Debug|Win32
+		{CD5A6F10-0A81-4155-A7A4-5DD206512090}.Release|Win32.ActiveCfg = Release|Win32
+		{CD5A6F10-0A81-4155-A7A4-5DD206512090}.Release|Win32.Build.0 = Release|Win32
+		{1C2F6392-8736-44E9-975B-A7C24E068A91}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C2F6392-8736-44E9-975B-A7C24E068A91}.Debug|Win32.Build.0 = Debug|Win32
+		{1C2F6392-8736-44E9-975B-A7C24E068A91}.Release|Win32.ActiveCfg = Release|Win32
+		{1C2F6392-8736-44E9-975B-A7C24E068A91}.Release|Win32.Build.0 = Release|Win32
+		{51E9CEDD-DB9F-4008-B7DE-45A7B80836E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{51E9CEDD-DB9F-4008-B7DE-45A7B80836E0}.Debug|Win32.Build.0 = Debug|Win32
+		{51E9CEDD-DB9F-4008-B7DE-45A7B80836E0}.Release|Win32.ActiveCfg = Release|Win32
+		{51E9CEDD-DB9F-4008-B7DE-45A7B80836E0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

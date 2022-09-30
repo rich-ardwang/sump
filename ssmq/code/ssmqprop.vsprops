@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="MQProp"
+	OutputDirectory="..\..\bin\$(BuildFolder)\"
+	IntermediateDirectory="$(BuildFolder)\"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="..\..\inc"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OutputFile="$(OutDir)$(ProjectName)$(TargetExt)"
+		AdditionalLibraryDirectories="..\..\lib\$(BuildFolder)"
+		ImportLibrary="..\..\lib\$(BuildFolder)\$(ProjectName).lib"
+	/>
+	<UserMacro
+		Name="BuildFolder"
+		Value="$(PlatformName)_vc9_notset_$(ConfigurationName)"
+		PerformEnvironmentSet="true"
+	/>
+</VisualStudioPropertySheet>
