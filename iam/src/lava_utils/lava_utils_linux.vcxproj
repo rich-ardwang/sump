@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{67344853-3eb1-41be-88e5-b58424b6c54d}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>lava_utils</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+    <ProjectName>lava_utils</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>~/myworks/lava</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>~/myworks/lava</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <RemoteRootDir>~/myworks/lava</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/myworks/lava</RemoteRootDir>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)</IntDir>
+    <RemoteTargetPath>$(RemoteRootDir)/bin/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</RemoteTargetPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <RemoteTargetPath>$(RemoteOutDir)$(TargetName)$(TargetExt)</RemoteTargetPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <RemoteTargetPath>$(RemoteOutDir)$(TargetName)$(TargetExt)</RemoteTargetPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteTargetPath>$(RemoteRootDir)/bin/$(Platform)/$(Configuration)/$(TargetName)$(TargetExt)</RemoteTargetPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="include\atomic.h" />
+    <ClInclude Include="include\fake_mutex.h" />
+    <ClInclude Include="include\interproc_detail.h" />
+    <ClInclude Include="include\i_queue.h" />
+    <ClInclude Include="include\lava_alloc.h" />
+    <ClInclude Include="include\lava_condition.h" />
+    <ClInclude Include="include\lava_config.h" />
+    <ClInclude Include="include\lava_container.h" />
+    <ClInclude Include="include\lava_conv.h" />
+    <ClInclude Include="include\lava_crt.h" />
+    <ClInclude Include="include\lava_sema.h" />
+    <ClInclude Include="include\lava_utils_api.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="include\queue_base.h" />
+    <ClInclude Include="include\rwlock.h" />
+    <ClInclude Include="include\spin_lock.h" />
+    <ClInclude Include="include\spin_wait.h" />
+    <ClInclude Include="include\stack.h" />
+    <ClInclude Include="include\timer.h" />
+    <ClInclude Include="include\utils_traits.h" />
+    <ClInclude Include="include\wintype_def.h" />
+    <ClInclude Include="lava_log.h" />
+    <ClInclude Include="lava_uuid.h" />
+    <ClInclude Include="sha256.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="lava_config.cpp" />
+    <ClCompile Include="lava_gzip_helper.cpp" />
+    <ClCompile Include="lava_log.cpp" />
+    <ClCompile Include="lava_uuid.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="sha256.cpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;./include;../third_party_linux/log4cxx/header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LAVA_LINUX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>log4cxx</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <PreprocessorDefinitions>LAVA_LINUX</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include;../include;../third_party_linux/log4cxx/header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>log4cxx</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;./include;../third_party_linux/centos/log4cxx/header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LAVA_LINUX</PreprocessorDefinitions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>log4cxx;uuid;z</LibraryDependencies>
+      <AdditionalLibraryDirectories>../third_party_linux/centos/log4cxx;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;./include;../third_party_linux/centos/log4cxx/header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LAVA_LINUX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../third_party_linux/centos/log4cxx;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>log4cxx;uuid;z</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

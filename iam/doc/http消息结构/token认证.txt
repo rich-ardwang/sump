@@ -1,0 +1,61 @@
+﻿统一请求地址前缀：http://172.16.73.236:8080/loginservice/
+登录认证请求接口：http://172.16.73.236:8080/loginservice/login-auth
+访问方式：POST
+数据格式：JSON
+
+
+Req:
+header:
+	name = "Content-Type" value = "application/json"
+	
+body:
+{
+	"http_server_name":"loginsrv.http_server",
+	"http_auth_pwd":"123.com",
+	"user_name":"sumscope_user_00001",
+	"token":"336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0"
+}
+
+==============================================================================================
+
+Ack:(success)
+header:
+	name = "Content-Length" value = 294
+	name = "Content-Type" value = "application/json"
+
+body: {"status": "ok", "code": 200, " data ": "数据信息" }
+
+{
+	"status":"ok",
+	"code":200,
+	"data": {
+		"ret_code":0,
+		"ret_message":"user token authentication success.",
+		"user_name":"sumscope_user_00001",
+		"user_id":"E316F453-35D3-4517-A10A-80564B727280",
+		"token":"336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0",
+		"server_time":"2019-10-24 10:00:00"
+	}
+}
+
+Ack:(failed)
+header:
+	name = "Content-Length" value = 247
+	name = "Content-Type" value = "application/json"
+
+body:
+
+{
+	"status":"bad_request",
+	"code":400,
+	"data": {
+		"ret_code":-1,
+		"ret_message":"user token authentication failed!",
+		"user_name":"sumscope_user_00001",
+		"user_id":"",
+		"token":"336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0",
+		"server_time":""
+	}
+}
+
+

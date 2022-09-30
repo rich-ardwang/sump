@@ -1,0 +1,15 @@
+Req:
+[Type](80102)
+[Subject]()
+[MessageID]()
+[ReplyTo]()
+<MAP>[xUserInfoUpdFanout]
+--<LIST>[List]
+----<MAP>[0]
+------<I16>[optFlg](0)
+------<STR>[userName](sumscope_user_00001)
+------<STR>[userPwd](123456.com)
+------<STR>[userId](E316F453-35D3-4517-A10A-80564B727280)
+------<STR>[cliMacAddr]()
+------<STR>[cliVersion]()
+

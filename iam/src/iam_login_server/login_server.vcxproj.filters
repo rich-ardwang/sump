@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="msgbus">
+      <UniqueIdentifier>{3be08669-6143-49fd-a358-abdaf356efff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{2b8a60b1-15ac-4eab-97fd-293cc22f7302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lava">
+      <UniqueIdentifier>{5acef783-59dd-4654-9aed-4b46c8e2309f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{d905fc50-9af3-49c7-b307-459808064095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process">
+      <UniqueIdentifier>{15c92b02-f547-4e35-9def-1015b4c54d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors">
+      <UniqueIdentifier>{80914062-7867-4823-bceb-6a1e6ede5e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\cjson">
+      <UniqueIdentifier>{aa963a99-e2b9-41bc-9291-9dc5bfc22a16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lava\lava_server.h">
+      <Filter>lava</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_callbacks.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_helper.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_session.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_thread.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_thread_factory.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_type.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_connection.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_connection_manager.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_reply.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_request.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_request_handler.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_request_parser.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_server.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="core\common.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\data_cache.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\thread_pool.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="process\handle_functions.h">
+      <Filter>process</Filter>
+    </ClInclude>
+    <ClInclude Include="process\server_msg_def.h">
+      <Filter>process</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_msg_handler.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_server.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+    <ClInclude Include="process\lava_process.h">
+      <Filter>process</Filter>
+    </ClInclude>
+    <ClInclude Include="process\msgbus_process.h">
+      <Filter>process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vendors\windows\cJSON\cJSON.h">
+      <Filter>vendors\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="http\http_header.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="msgbus\msgbus_base_session.h">
+      <Filter>msgbus</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lava\lava_server.cpp">
+      <Filter>lava</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_callbacks.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_helper.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_session.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_thread.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_thread_factory.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_connection.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_connection_manager.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_reply.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_request_handler.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_request_parser.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\http_server.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="core\common.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\data_cache.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\main.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="process\handle_functions.cpp">
+      <Filter>process</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_msg_handler.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="msgbus\msgbus_server.cpp">
+      <Filter>msgbus</Filter>
+    </ClCompile>
+    <ClCompile Include="process\lava_process.cpp">
+      <Filter>process</Filter>
+    </ClCompile>
+    <ClCompile Include="process\msgbus_process.cpp">
+      <Filter>process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vendors\windows\cJSON\cJSON.c">
+      <Filter>vendors\cjson</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\CMakeLists.txt" />
+    <Text Include="..\..\readme.txt" />
+  </ItemGroup>
+</Project>

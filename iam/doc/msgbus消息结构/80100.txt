@@ -1,0 +1,44 @@
+Req:
+[Type](80100)
+[Subject]()
+[MessageID]()
+[ReplyTo](gateway_srv_token_verify.req.queue.rspa)
+<MAP>[xGtwTokenVerifyReq]
+--<LIST>[List]
+----<MAP>[0]
+------<STR>[userName](sumscope_user_00001)
+------<STR>[token](336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0)
+----<MAP>[1]
+------<STR>[userName](sumscope_user_00002)
+------<STR>[token](336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0)
+
+
+
+Ack:(success)
+[Type](80100)
+[Subject]()
+[MessageID]()
+[ReplyTo]()
+<MAP>[AckMsgHead]
+--<I16>[retcode](0)
+--<STR>[desc](success)
+<MAP>[AckMsgBody]
+--<LIST>[List]
+----<MAP>[0]
+------<I16>[verifyRet](0)
+------<STR>[verifyMsg](token passed.)
+------<STR>[userName](sumscope_user_00001)
+------<STR>[userId](E316F453-35D3-4517-A10A-80564B727280)
+------<STR>[token](336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0)
+------<STR>[serverTime](2019-10-24 10:00:00)
+----<MAP>[1]
+------<I16>[verifyRet](-1)
+------<STR>[verifyMsg](token not passed!)
+------<STR>[userName](sumscope_user_00002)
+------<STR>[userId]()
+------<STR>[token](336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0)
+------<STR>[serverTime]()
+
+
+
+

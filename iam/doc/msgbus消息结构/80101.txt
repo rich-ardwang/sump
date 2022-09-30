@@ -1,0 +1,12 @@
+Req:
+[Type](80101)
+[Subject](loginServerId)
+[MessageID]()
+[ReplyTo]()
+<MAP>[xTokenInfoSyncFanout]
+--<LIST>[List]
+----<MAP>[0]
+------<STR>[token](336df8681794f308f244da4532ad07efe73ee39f3f4fd5c42177288914da70e0)
+------<I64>[tokenTime](1571903962)
+------<STR>[userName](sumscope_user_00001)
+
