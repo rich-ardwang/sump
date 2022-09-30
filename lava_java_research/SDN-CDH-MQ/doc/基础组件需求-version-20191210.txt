@@ -1,0 +1,72 @@
+接口需求(version-20191210)
+
+public interface CdhMq {
+    void initClientSubscribeBytes(String serverUrl, String topic, Consumer<Pair<String,byte[]>> subscribeConsumer);
+    void initClientSubscribeImageBytes(String serverUrl, String topic, byte[] requestParams, Consumer<Pair<String,byte[]>> subscribeConsumer);
+    void initClientRequest(String serverUrl);
+    void initServerPublish(String myUrl, String topic);
+    void initServerResponseBytes(String myUrl, String queue, UnaryOperator<byte[]> responseHandler);
+    void start();
+    boolean isRunning();
+    void stop();
+    void publishBytes(byte[] bytes);
+    void requestBytesAsync(String queue, byte[] requestParams, Consumer<byte[]> replyConsumer);
+    byte[] requestBytesSync(String queue, byte[] requestParams, int timeoutInMs);
+}
+
+【基础组件】只需提供以上接口, 在此基础上, cdh团队可增加SdnMessage的支持：
+
+    void initClientSubscribeSdn(String url, String topic, Consumer<Pair<String, SdnMessage>> subscribeConsumer);
+    void initClientSubscribeImageSdn(String url, String topic, SdnMessage requestParams, SdnMessageContext replyContext,
+                                     Consumer<Pair<String, SdnMessage>> subscribeConsumer);
+    void initServerResponseSdn(String url, String queue, UnaryOperator<SdnMessage> responseHandler);
+    void publishSdn(SdnMessage message);
+    void publishJms(MapMessage jms);
+    void requestSdnAsync(String queue, SdnMessage request, SdnMessageContext replyContext, Consumer<SdnMessage> replyConsumer);
+    SdnMessage requestSdnSync(String queue, SdnMessage request, SdnMessageContext replyContext, int timeoutInMs);
+
+
+- cdhmq 接口同时支持传统总线, 如 rabbitmq / qpid / ceda 已初步支持, 该接口已针对应用做简化设计
+
+- 对同一个CdhMq对象, 只初始化一次, 即一次调用 init...
+- 客户端每个订阅, 都创建一个CdhMq对象
+- 客户端每个订阅, start() 开始订阅, stop() 取消订阅
+- 客户端对服务端的不同请求, 可使用同一个对象
+- 服务端发布信息到不同topic, 需要创建多个 CdhMq 对象
+- 服务端响应不同的queue, 需创建不同的 CdhMq 对象
+- 使用示例可参考附件中的 test 代码
+
+- 对于客户端功能, 该接口隐藏了共享的 connection 对象, 多个同样的 serverUrl 应该共享一份 connection 对象
+- 对于服务端功能, 该接口隐藏了共享的 server 对象, 多个同样的 myUrl 应该共享一份 server 对象
+- 订阅/推送/请求/响应开始于 start, init 只是初始化资源, 并不真正启动
+- 订阅/推送/请求/响应结束于 stop, 退订/停止推送等, 但共享资源无需释放
+- 订阅/推送/请求/响应可多次调用 start / stop (比如主从实例反复切换)
+- start() 之后方可调用 publish / request
+
+- 【快照查询+订阅】单一接口:
+    - 订阅接口 initClientSubscribeImage... 中, subscribeConsumer 首次接收到的数据为快照查询结果, 之后的数据为增量推送消息
+    - 订阅参数 Pair<String,byte[]>, 第一个参数 topic 可用于区分是快照还是推送
+- topic 通配符(用于订阅/推送/请求/响应)
+    - 以"."分割, 如"sdn.cdh.dbl"
+    - "*"可匹配一个小节, 如: 
+        "sdh.cdh.*.input" 可匹配 "sdn.cdh.dbl.input" 及 "sdn.cdh.dcs.input", 但不能匹配 "sdn.cdh.dcs.a.input"
+    - "**"可匹配多个小节, 如: 
+        "sdh.cdh.**.input" 可匹配 "sdn.cdh.dbl.input" 及 "sdn.cdh.dcs.input", 也能匹配 "sdn.cdh.dcs.a.input"
+- 多活支持:
+    - serverUrl (或myUrl) 在 ceda 实现为 serverKey, 如 "SERVER.SDN_CDH_DCS"
+    - 服务端进程根据 myUrl 注册本实例至注册服务器(zookeeper)
+    - 客户端进程根据 serverUrl 查询实例, 并且为每个实例创建连接, 使用方无感知(但能查询到相关日志)
+    - 客户端同时往服务端多活实例订阅及请求, 使用方无感知(但能查询到相关日志)
+    - 客户端同时收服务端多活实例的推送消息, 根据唯一ID进行过滤, 使用方无感知(但能查询到相关日志)
+    - 客户端同时发送同一请求给多个服务端, 返回结果根据同一请求ID进行过滤, 使用方无感知(但能查询到相关日志)
+    - 服务端增加/减少节点实例, 使用方无感知(但能查询到相关日志)
+    - 客户端与多活服务端程序断开连接后恢复连接，重新向服务端订阅后，不影响客户端接收消息的顺序和内容
+- 主从支持:
+    - 服务端(调用initServer...的进程)能收到主从切换事件通知, 事件通知接口由【基础组件】定义即可
+    - 客户端能检测到服务端的主从切换, 并自动连接到新的主服务端, 使用方无感知(但能查询到相关日志)
+    - 服务端保证异常情况下至多只有一主可以正常工作，不影响客户端接收消息的顺序和内容
+- 大包支持:
+    - 请求/响应支持100M字节数据, 使用方无感知(但能查询到相关日志)
+    - 压缩由应用端自行处理(应用端负责压缩/解压/传入压缩后的byte数组)
+- 性能:
+    - 不低于现有Ceda提供的性能
