@@ -1,0 +1,4 @@
+<map id="MARKIT_GROUP_SURVEILLANCE_DATA" name="MARKIT_GROUP_SURVEILLANCE_DATA">
+<area shape="rect" id="node2" href="$struct_m_a_r_k_i_t___s_u_r_v_e_i_l_l_a_n_c_e___p_e_r_f_o_r_m___d_e_t_a_i_l_s.html" title="This structure contains loan performance, specifically the prepayment speed and default information..." alt="" coords="5,6,187,47"/>
+<area shape="rect" id="node3" href="$struct_m_a_r_k_i_t___s_u_r_v_e_i_l_l_a_n_c_e___d_e_l_i_n_q___d_e_t_a_i_l_s.html" title="This structure contains prepayment penalty information. " alt="" coords="211,6,393,47"/>
+</map>

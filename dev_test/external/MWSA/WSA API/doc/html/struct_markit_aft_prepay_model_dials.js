@@ -1,0 +1,25 @@
+var struct_markit_aft_prepay_model_dials =
+[
+    [ "additivePop1ToPop2Shift", "struct_markit_aft_prepay_model_dials.html#ae3eb7e26fe52595e6ce0a4c9328945ee", null ],
+    [ "additivePop2ToPop3Shift", "struct_markit_aft_prepay_model_dials.html#a367abfd213e6bc2e5e947cf3a891ea67", null ],
+    [ "ageMultiplier", "struct_markit_aft_prepay_model_dials.html#a0052a6faf5710f2114dab1b0f86a7e03", null ],
+    [ "ageShiftInHousingTurnoverAgingFunction", "struct_markit_aft_prepay_model_dials.html#a54f7229932e0872822efda21e270cb2e", null ],
+    [ "applyPopShiftFromWhatDateFlag", "struct_markit_aft_prepay_model_dials.html#ad3cc9f362ed74f33791eed74d2826265", null ],
+    [ "applyPremiumOriginationAdjFactorOnHousingTurnoverFlag", "struct_markit_aft_prepay_model_dials.html#ad9ca9903ab47e9f2ad6cb7b6ebcc0061", null ],
+    [ "applyPrepaymentMultipliersToFixedPeriodOnlyForHybridARM", "struct_markit_aft_prepay_model_dials.html#a111f72c8d9385fce060205bd6f230268", null ],
+    [ "burnMultiplier1", "struct_markit_aft_prepay_model_dials.html#ab413aa9a10a79e87baea2c64f528883d", null ],
+    [ "burnMultiplier2", "struct_markit_aft_prepay_model_dials.html#af7a802f5fcded8c1bf082e4f16a369bd", null ],
+    [ "calcHousingSalesStartingFromMRatedateFlag", "struct_markit_aft_prepay_model_dials.html#ad02a3d1a636473ae68bea2740e2bd63f", null ],
+    [ "changeOfCreditRelatedPrepaymentMultiplier", "struct_markit_aft_prepay_model_dials.html#a4c085d8b34c5d28da7def273975d1e3f", null ],
+    [ "curPop1ToPop2Shift", "struct_markit_aft_prepay_model_dials.html#a18c1f8b08bf7e4bab3a670b3d73ed9f4", null ],
+    [ "curPop2ToPop3Shift", "struct_markit_aft_prepay_model_dials.html#a7552c956401a1ddeac0e9a234fa8e7d2", null ],
+    [ "elbowShiftForRefiMortgageRateInPercent", "struct_markit_aft_prepay_model_dials.html#acfe6fd70601941301b205c183c1fe4ad", null ],
+    [ "htMultiplier", "struct_markit_aft_prepay_model_dials.html#a3dbfacee4c93c3d383326ebbd58c763e", null ],
+    [ "premiumOriginationAdjFactor", "struct_markit_aft_prepay_model_dials.html#ac973a5f815c3311a29b5cd4120daefe5", null ],
+    [ "projGrossWACPercent", "struct_markit_aft_prepay_model_dials.html#aafc27f08c9f0c476eb10118c2f64b705", null ],
+    [ "publicityMultiplierChange", "struct_markit_aft_prepay_model_dials.html#a11d4bbdb5e8f30e3d14c9f1ccc3f2ded", null ],
+    [ "refiLagInMonth", "struct_markit_aft_prepay_model_dials.html#a744836cdc23aec2258c58e1920767884", null ],
+    [ "rfMultiplier", "struct_markit_aft_prepay_model_dials.html#af63161c29659102b58cd0d3239f7e763", null ],
+    [ "turnOffShortTermMultiplicativeAdjustments", "struct_markit_aft_prepay_model_dials.html#a1b5fde3e09bd315d0d615b57db4485cf", null ],
+    [ "useMultiplicativeOrAdditivePopShiftFlag", "struct_markit_aft_prepay_model_dials.html#aa5f0eff7d15e3a35cdca3066e909fd8b", null ]
+];

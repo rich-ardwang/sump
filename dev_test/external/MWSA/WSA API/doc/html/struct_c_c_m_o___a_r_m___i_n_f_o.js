@@ -1,0 +1,25 @@
+var struct_c_c_m_o___a_r_m___i_n_f_o =
+[
+    [ "consecutive_recast_months", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a245fcf47b281e73a6ef5908a16bccc21", null ],
+    [ "first_pay_cap", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a93d089f6e02532b822a7cea5c2fed7ad", null ],
+    [ "first_pay_reset", "struct_c_c_m_o___a_r_m___i_n_f_o.html#ac248a1d087a77dab8db98d1393302b2c", null ],
+    [ "first_reset", "struct_c_c_m_o___a_r_m___i_n_f_o.html#aec3b17e0359f0717bf4dc99b63f7f44d", null ],
+    [ "first_reset_cap", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a6fe40df0f39af27269e0658864962456", null ],
+    [ "gross_margin", "struct_c_c_m_o___a_r_m___i_n_f_o.html#ac0854c6d4f80b7efb7eed4ca53da8d72", null ],
+    [ "index", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a1a872783a9a2495a7ee32511ca3318f8", null ],
+    [ "is_mega", "struct_c_c_m_o___a_r_m___i_n_f_o.html#af632a5ed736195f21971aad401574f1e", null ],
+    [ "lifetime_cap", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a04d2886abb9ac99ae275a1c3a519c789", null ],
+    [ "lifetime_floor", "struct_c_c_m_o___a_r_m___i_n_f_o.html#af20971d15d5704485eaa8c31118a8f62", null ],
+    [ "lookback", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a386f2583c98d91c8a4712c6b272d15d0", null ],
+    [ "multiplier", "struct_c_c_m_o___a_r_m___i_n_f_o.html#ad7161967476d73bd559ce4154618b22b", null ],
+    [ "neg_amort_limit", "struct_c_c_m_o___a_r_m___i_n_f_o.html#aedb83580d461451292e537ab04308ac1", null ],
+    [ "net_margin", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a7c60690851616f943ffbf00b618183d2", null ],
+    [ "original_coupon", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a6dc68b3bbf8d79b881f1966f6203a1cc", null ],
+    [ "original_first_pay_reset", "struct_c_c_m_o___a_r_m___i_n_f_o.html#aa4a226f32fe14cb23e0827ca413b58da", null ],
+    [ "original_first_reset", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a7351865bc173d248186222fcf045af57", null ],
+    [ "pay_periodic_cap", "struct_c_c_m_o___a_r_m___i_n_f_o.html#aaa179aed28d86cca127b30980c9aec7d", null ],
+    [ "pay_reset_freq", "struct_c_c_m_o___a_r_m___i_n_f_o.html#abaa362d420a9f23288acf0dcbdf67f09", null ],
+    [ "periodic_cap", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a7f1c0e7234fd9651b680a2e7721cf001", null ],
+    [ "recast_month", "struct_c_c_m_o___a_r_m___i_n_f_o.html#ac916cf467f1d9979314a6fa7176f3233", null ],
+    [ "reset_freq", "struct_c_c_m_o___a_r_m___i_n_f_o.html#a44eb0f77c7f920e09194950b1202df65", null ]
+];

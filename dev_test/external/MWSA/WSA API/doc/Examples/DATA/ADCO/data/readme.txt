@@ -1,0 +1,1 @@
+ADCO module license file named "adco_lic.key" should be stored here.

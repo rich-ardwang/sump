@@ -1,0 +1,95 @@
+#Code file for Chasen SDK.
+#
+#Day count rules
+#
+DAYCOUNTRULES
+10
+0;30/360
+1;Act/360
+2;Act/365
+3;Act/Act(ISMA)
+4;30/360
+5;30E/360
+6;30E+/360
+7;Act/Act
+8;Act/Act(ISDA)
+9;Act/Act(AFB)
+#
+#Calendar (Business day) rules
+#
+CALENDARRULES
+4
+A;Next Bus Day
+B;Next Bus Day In Month
+C;Next BD Aft Serv Remit
+N;No Adjustment
+#
+# Currencies
+#
+CURRENCIES
+6
+E;Euros
+F;Swiss Francs
+K;Swedish Kronors
+L;British Pounds
+U;US Dollars
+R;Russian Rubles
+#
+#Holiday Calendars
+#
+HOLIDAYS
+53
+AM;Amsterdam
+AT;Athens Stock Exch
+BA;Buenos Aires
+BD;Budapest
+BL;Belgium
+BR;Brussels/Euronext
+BU;Bucharest
+BV;Bratislava
+CP;Copenhagen
+DB;Dublin/Irish Stock Exch
+EC;ECU
+FR;Frankfurt/Deutsche Borse
+HK;Hong Kong
+HL;Helsinki Exch
+IT;Istanbul Stock Exch
+JI;Jersey Channel Islands
+JK;Jakarta/Bursa Efek
+JO;Johannesburg Stock Exch
+KL;Kuala Lampur
+LB;Lisbon/Euronext
+LN;London
+LJ;Ljubljana Stock Exch
+LU;Luxembourg
+MC;Mercado Continuo (SIBE)
+ML;Milan/Borsa Italiana
+MS;Russian Trading System
+MX;Bolsa Mexicana Valores
+NA;None
+ND;Newark-Delaware
+NY;NY Stock Exch Settle
+N1;NY Stock Exch Trade
+NZ;New Zealand Stock Exch
+OS;Oslo Bors
+PA;Paris
+PR;Prague
+RO;Rome
+RY;Iceland Stock Exch
+SE;Korea Stock Exch
+SH;Shanghai Stock Exc Trade
+SI;Singapore Stock Exch
+SO;Bulgarian Stock Exch
+SP;Bolsa Valores Sao Paolo
+ST;Stockholmsborsen
+SY;Australian Stock Exch
+TA;Taiwan Stock Exch
+TG;Target
+TK;Tokyo Stock Exch
+TR;Toronto Stock Exch
+UB;US Bond Market
+VI;Wiener Borsekammer
+VT;Valletta
+WA;Warsaw Stock Exch
+ZU;Swiss Exch
+

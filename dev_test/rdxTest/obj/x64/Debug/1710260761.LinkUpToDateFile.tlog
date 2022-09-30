@@ -1,0 +1,1 @@
+g++ -o "/root/projects/rdxTest/bin/x64/Debug/rdxTest.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/rdxTest/obj/x64/Debug/adlist.o /root/projects/rdxTest/obj/x64/Debug/main.o /root/projects/rdxTest/obj/x64/Debug/zmalloc.o

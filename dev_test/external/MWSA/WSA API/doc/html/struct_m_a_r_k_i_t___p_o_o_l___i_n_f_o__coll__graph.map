@@ -1,0 +1,7 @@
+<map id="MARKIT_POOL_INFO" name="MARKIT_POOL_INFO">
+<area shape="rect" id="node2" href="$struct_m_a_r_k_i_t___h_e_l_o_c___l_o_a_n___i_n_f_o.html" title="This structure contains additional information required by HELOC loans. " alt="" coords="15,5,223,32"/>
+<area shape="rect" id="node3" href="$struct_m_a_r_k_i_t___p_a_y_m_e_n_t___s_c_h_e_d_u_l_e.html" title="This structure contains two arrays in parallel to describe the payment schedule information. " alt="" coords="5,56,232,83"/>
+<area shape="rect" id="node4" href="$struct_c_c_m_o___a_r_m___i_n_f_o.html" title="This structure holds adjustable rate information about collateral. " alt="" coords="49,107,188,133"/>
+<area shape="rect" id="node5" href="$struct_m_a_r_k_i_t___p_r_e_p_a_y___p_e_n_a_l_t_y.html" title="This structure contains prepayment penalty information. " alt="" coords="17,157,220,184"/>
+<area shape="rect" id="node6" href="$struct_m_a_r_k_i_t___s_t_u_d_e_n_t___l_o_a_n___i_n_f_o.html" title="This structure holds information about student loan. " alt="" coords="5,208,232,235"/>
+</map>

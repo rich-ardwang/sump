@@ -1,0 +1,28 @@
+﻿生成启动时间为 2019/5/19 21:43:11。
+     1>项目“E:\vcLab\boostTest\boostTest\boostTest.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\boostTest.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\boostTest.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt boostTest.cpp
+         boostTest.cpp
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\vcLab\boostTest\Debug\boostTest.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\boostTest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\vcLab\boostTest\Debug\boostTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\vcLab\boostTest\Debug\boostTest.lib" /MACHINE:X86 Debug\boostTest.exe.embed.manifest.res
+         Debug\boostTest.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\boostTest.exe.embed.manifest" /manifest Debug\boostTest.exe.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         boostTest.vcxproj -> E:\vcLab\boostTest\Debug\boostTest.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\boostTest.unsuccessfulbuild”。
+         正在对“Debug\boostTest.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\vcLab\boostTest\boostTest\boostTest.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.67

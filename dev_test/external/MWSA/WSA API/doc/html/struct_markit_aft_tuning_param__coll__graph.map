@@ -1,0 +1,4 @@
+<map id="MarkitAftTuningParam" name="MarkitAftTuningParam">
+<area shape="rect" id="node2" href="$struct_markit_aft_default_model_dials.html" title="The fine tune parameters for the AFT default model. This supplements structure MarkitAftTuningParam, and is optional. " alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node3" href="$struct_markit_aft_prepay_model_dials.html" title="The fine tune parameters for the AFT prepay model. This supplements structure MarkitAftTuningParam, and is optional. " alt="" coords="212,5,393,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MARKIT_DEAL_PAYMENT_GROUP" name="MARKIT_DEAL_PAYMENT_GROUP">
+<area shape="rect" id="node2" href="$struct_m_a_r_k_i_t___g_r_o_u_p___p_a_y_m_e_n_t___s_e_t.html" title="This structure contains one set of payment group information. " alt="" coords="5,96,240,123"/>
+<area shape="rect" id="node3" href="$struct_m_a_r_k_i_t___p_a_y_m_e_n_t___b_o_n_d.html" title="This structure contains the bond be payment of group. " alt="" coords="27,5,217,32"/>
+</map>
