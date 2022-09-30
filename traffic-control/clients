@@ -1,0 +1,29 @@
+#!/bin/bash
+
+SERVER_IP="172.16.73.118"
+SERVER_PORT="6886"
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <number of clients>"
+  exit 1
+fi
+NUM_CLIENTS=$1
+
+shutdown() {
+  # Get our process group id
+  PGID=$(ps -o pgid= $$ | grep -o '[0-9]*')
+  # Kill it in a new new process group
+  setsid kill -- -$PGID
+  exit 0
+}
+
+trap "shutdown" SIGINT
+
+echo "Staring $NUM_CLIENTS clients, ^C to quit."
+
+while [ $NUM_CLIENTS -gt 0 ]; do
+  nc -d ${SERVER_IP} ${SERVER_PORT} > /dev/null &
+  let NUM_CLIENTS-=1
+done
+
+wait

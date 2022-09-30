@@ -1,0 +1,63 @@
+#!/bin/bash
+
+TXQUEUELEN="1000"  # 1000 is the linux default
+
+case `hostname` in
+  "ubuntu-prof")
+    DEV="eth0"
+    ;;
+  *)
+    echo "ERROR: unknown host." >&2
+    exit 1
+esac
+
+ifconfig ${DEV} >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "ERROR: DEV=\"${DEV}\" is not a known interface." >&2
+  exit 1
+fi
+
+# if DEV is a bond, we will remove the htb on each of the slaves
+
+if [ -f "/proc/net/bonding/${DEV}" ]; then
+  if [ ! -f "/sys/class/net/${DEV}/bonding/slaves" ]; then
+    echo "ERROR: device is a bond, but it has no slaves."
+    exit 1
+  else
+    DEVS=`cat /sys/class/net/${DEV}/bonding/slaves`
+    echo "Device ${DEV} is a bond, slaves are ${DEVS}."
+  fi
+else
+  DEVS=${DEV}
+fi
+
+for DEV in ${DEVS}; do
+  echo "Device ${DEV}"
+
+  # delete any existing qdisc on the interface
+  STUFF=`tc qdisc del dev ${DEV} root 2>&1`
+  if [ $? -ne 0 ]; then
+    echo ${STUFF} | grep "Operation not permitted" >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+      echo "ERROR deleting root qdisc from ${DEV}, got root?" >&2
+      exit 1
+    fi
+    echo ${STUFF} | grep "No such file" >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+      echo "ERROR deleting root qdisc from ${DEV}: ${STUFF}" >&2
+      exit 1
+    fi
+  fi
+
+  # reset TXQUEULEN
+  ifconfig ${DEV} txqueuelen ${TXQUEUELEN}
+  if [ $? -ne 0 ]; then
+    echo "ERROR setting txqueuelen of ${DEV} to ${TXQUEUELEN}." >&2
+    exit 1
+  fi
+
+  tc qdisc show dev ${DEV}
+  tc class show dev ${DEV}
+  tc filter show dev ${DEV}
+done
+

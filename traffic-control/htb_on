@@ -1,0 +1,178 @@
+#!/bin/bash
+
+# This script configures a queuing discipline (qdisc) for the
+# interface specified by DEV (configured below).  The DEV can by
+# either a regular interface or a bond.  
+#
+# This script is only intended for an HA bond, as it will configure
+# identical HTBs on each of the slaves.  This script also assumes that
+# you are not using the multique capabilities of the physical NIC, as
+# the qdiscs it is configuring are not multiqueue capable.
+#
+# It will rate limit outbound traffic from the ports in SERVER_PORTS
+# to LIMIT_10 mbits/s.  These ports are gauranteed up to LIMIT_10
+# mbits/s bandwidth.
+#
+# Overall outbound traffic on the interface will be limited to MAX.
+# Outbound traffic originating from other ports are limited to MAX -
+# LIMIT_10 mbits/s, but can "borrow" up to MAX if SERVER_PORTS are not
+# using their allocated bandwidth.
+
+# There are many advantages to configuring based on host name; Add
+# your host name to the case statement below.  You can override
+# TXQUEUELEN and MAX if necessary by host name.
+
+TXQUEUELEN="1000"        # 1000 is the linux default
+MAX="900"                # max for all classes in mbits/sec
+
+case `hostname` in
+  "ubuntu-prof")
+    SERVER_PORTS="6886 6887" # traffic from these ports will be limited to LIMIT_10
+    LIMIT_10="200"           # limit for class 1:10 in mbits/sec
+    DEV="eth0"               # interface to configure (may be a bond)
+    ;;
+  *)
+    echo "ERROR: unknown host." >&2
+    exit 1
+esac
+
+# sanity check the configuration
+
+if [ -z "${SERVER_PORTS}" ]; then
+  echo "ERROR: SERVER_PORTS is not configured." >&2
+  exit 1
+fi
+
+for PORT in ${SERVER_PORTS}; do
+  REG_EXP='^[0-9]+$'
+  if ! [[ ${PORT} =~ $REG_EXP ]]; then
+    echo "ERROR: SERVER_PORTS port \"${PORT}\" is not a valid TCP port number." >&2
+    exit 1
+  elif [ ${PORT} -gt 65535 ]; then
+    echo "ERROR: SERVER_PORTS port \"${PORT}\" is greater than the maximum." >&2
+    exit 1
+  fi
+done
+
+if [ -z "${LIMIT_10}" ]; then
+  echo "ERROR: LIMIT_10 is not configured." >&2
+  exit 1
+elif [ -z "${DEV}" ]; then
+  echo "ERROR: DEV is not configured." >&2
+  exit 1
+fi
+
+ifconfig ${DEV} >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "ERROR: DEV=\"${DEV}\" is not a known interface." >&2
+  exit 1
+fi
+
+if [ ${LIMIT_10} -gt ${MAX} ]; then
+  echo "ERROR: LIMIT_10 (${LIMIT_10}) > MAX (${MAX})." >&2
+  exit 1;
+fi
+
+LIMIT_11=$(( ${MAX} - ${LIMIT_10} )) # limit for default class 1:11 in mbits/sec
+
+# for smoothest rate limiting set the timer interupt rate to 1000
+
+cat /boot/config-`uname -r` | grep 'CONFIG_HZ=1000' 2>&1 >/dev/null
+if [ $? -ne 0 ]; then
+  echo "NOTICE: Rate limiting is smoothest with timer interrupt rate 1000" >&2
+fi
+
+echo "Limiting traffic from ports ${SERVER_PORTS} on ${DEV} to ${LIMIT_10}mbit/s total."
+echo "Remaining traffic on ${DEV} guaranteed ${LIMIT_11}mbit/s, with a ceiling of ${MAX}."
+echo
+
+# if DEV is a bond, we will configure an htb on each of the slaves
+
+if [ -f "/proc/net/bonding/${DEV}" ]; then
+  if [ ! -f "/sys/class/net/${DEV}/bonding/slaves" ]; then
+    echo "ERROR: device is a bond, but it has no slaves." >&2
+    exit 1
+  else
+    DEVS=`cat /sys/class/net/${DEV}/bonding/slaves`
+    echo "Device ${DEV} is a bond, slaves are ${DEVS}."
+  fi
+else
+  echo "Device ${DEV} is not a bond."
+  DEVS=${DEV}
+fi
+echo
+
+for DEV in ${DEVS}; do
+  echo "Device ${DEV}"
+
+  # delete any existing qdisc on the interface
+  STUFF=`tc qdisc del dev ${DEV} root 2>&1`
+  if [ $? -ne 0 ]; then
+    echo ${STUFF} | grep "Operation not permitted" >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+      echo "ERROR deleting root qdisc from ${DEV}, got root?" >&2
+      exit 1
+    fi
+    echo ${STUFF} | grep "No such file" >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+      echo "ERROR deleting root qdisc from ${DEV}: ${STUFF}" >&2
+      exit 1
+    fi
+  fi
+
+  # reset TXQUEULEN
+  ifconfig ${DEV} txqueuelen ${TXQUEUELEN}
+  if [ $? -ne 0 ]; then
+    echo "ERROR setting txqueuelen of ${DEV} to ${TXQUEUELEN}." >&2
+    exit 1
+  fi
+
+  # add an htb to the root, default traffic to class 1:11
+  tc qdisc add dev ${DEV} root handle 1: htb default 11 
+  if [ $? -ne 0 ]; then
+    echo "ERROR adding root htb to ${DEV}." >&2
+    exit 1
+  fi
+
+  # this htb can share bandwidth with is children and is rate limited to MAX
+  tc class add dev ${DEV} parent 1:  classid 1:1  htb \
+    rate ${MAX}mbit ceil ${MAX}mbit
+  if [ $? -ne 0 ]; then
+    echo "ERROR adding class 1:1 htb on ${DEV} with rate and ceil of ${MAX}." >&2
+    exit 1
+  fi
+
+  # class 1:10 is rate limited to LIMIT_10; it cannot borrow
+  tc class add dev ${DEV} parent 1:1 classid 1:10 htb \
+    rate ${LIMIT_10}mbit ceil ${LIMIT_10}mbit
+  if [ $? -ne 0 ]; then
+     echo "ERROR adding class 1:10 on ${DEV} with rate and ceil of ${LIMIT_10}." >&2
+  fi
+
+  # class 1:11 is assured at least LIMIT_11, but can borrow to MAX
+  tc class add dev ${DEV} parent 1:1 classid 1:11 \
+    htb rate ${LIMIT_11}mbit ceil ${MAX}mbit
+  if [ $? -ne 0 ]; then 
+    echo "ERROR adding class 1:11 on ${DEV} with rate ${LIMIT_11} and ceil ${MAX}." >&2
+    exit 1
+  fi
+
+  # direct traffic from all SERVER_PORTS to class 1:10, everything else defaults to 1:11
+  for PORT in ${SERVER_PORTS}; do
+    tc filter add dev ${DEV} parent 1:0 \
+      protocol ip \
+      u32 match ip sport ${PORT} 0xffff \
+      flowid 1:10
+    if [ $? -ne 0 ]; then
+      echo "ERROR adding filter on ${DEV} for port ${PORT}." >&2
+      exit 1
+    fi
+  done
+
+  tc qdisc show dev ${DEV}
+  tc class show dev ${DEV}
+  tc filter show dev ${DEV}
+  echo
+done
+
+echo "HTBs configured without error."
